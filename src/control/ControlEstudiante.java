@@ -20,7 +20,7 @@ public class ControlEstudiante {
     public static boolean insertEstudiante(LinkedList<Estudiante> le) {
         boolean ins = false;
         for (int i = 0; i < le.size(); i++) {
-            System.out.println("xxxx "+le.get(i).toString());
+            System.out.println("xxxx " + le.get(i).toString());
             String sql = "INSERT INTO estudiantes (identificacione,codigoe,nombre1e,apellido1e,direccione,correoe,jornada) VALUES "
                     + "('" + le.get(i).getIdentificacione() + "', '" + le.get(i).getCodigoe() + "', '" + le.get(i).getNombre1e() + "', '"
                     + le.get(i).getApellido1e() + "', '" + le.get(i).getDireccione() + "', '" + le.get(i).getCorreoe() + "', '" + le.get(i).getJornada() + "');";
@@ -30,6 +30,17 @@ public class ControlEstudiante {
         }
         return ins;
 
+    }
+
+    public static boolean insertEstudianteFoto(LinkedList<Estudiante> le) {
+        String sql = "";
+        for (int i = 0; i < le.size(); i++) {
+            sql = "";
+            sql = "INSERT INTO estudiantes (identificacione,codigoe,nombre1e,apellido1e,direccione,correoe,jornada,Fotoestudiante)"
+                    + " VALUES(?,?,?,?,?,?,?,?)";
+
+        }
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
